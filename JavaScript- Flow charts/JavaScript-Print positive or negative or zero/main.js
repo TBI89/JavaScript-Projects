@@ -8,7 +8,7 @@ let num;
 while(true) {
     num = +prompt("Enter a number :");
 
-    if(num % 7 === 0) {
+    if(num && num % 7 ===0){
         break;
     }
 
