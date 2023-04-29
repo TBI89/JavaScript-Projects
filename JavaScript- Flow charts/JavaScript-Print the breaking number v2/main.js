@@ -10,4 +10,4 @@ while (num >= 0) {
     }
 }
 
-document.write("Power of all numbers entered:" + count)
+document.write("Power of all numbers entered:<br>" + count );
