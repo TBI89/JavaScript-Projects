@@ -1,4 +1,4 @@
-// Display a square made of decreasing numbers (based on the users input).
+// Display a square made of decreasing numbers (based on the users input). 
 
 let n = +prompt("Enter a positive number: ");
 
