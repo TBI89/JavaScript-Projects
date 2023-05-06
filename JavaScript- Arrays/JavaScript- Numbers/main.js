@@ -16,7 +16,6 @@ for (let i = 1; i <= 100; i++) {
 for (let i = 0; i < numbers.length; i++) {
     document.write(numbers[i] + "| ");
 }
-
 document.write("<hr>");
 
 // Display in a reverse order:
@@ -24,7 +23,6 @@ document.write("<hr>");
 for (let i = numbers.length - 1; i > 0; i--) {
     document.write(numbers[i] + "| ");
 }
-
 document.write("<hr>");
 
 // Print sum of all numbers (using for-of loop):
@@ -37,24 +35,24 @@ document.write(`Sum: ${sum}<br>`);
 
 document.write("<hr>");
 
-// Print average all numbers (with for-of loop again):
+// Print the average of all numbers (with for-of loop again):
 
 const avg = sum / numbers.length;
-
 document.write(`Average: ${avg}<br>`);
 
 document.write("<hr>");
 
 // Print even numbers only:
 
+let evenNumbers = [];
 for (const item of numbers) {
     if (item % 2 === 0)
-        document.write(item + "| ");
+        evenNumbers.push(item);
 }
+document.write("The even numbers are " + evenNumbers.join(" | ") + "<hr>");
 
-document.write("<hr>");
 
-// Print how many odd numbers are (i):
+// Count how many odd numbers are:
 
 let totalOdds = 0;
 for (const item of numbers) {
@@ -66,7 +64,6 @@ document.write("Number of odds: " + totalOdds);
 document.write("<hr>");
 
 // Print the biggest number:
-
 
 let max = -Infinity;
 for (const item of numbers) {
@@ -90,3 +87,24 @@ document.write(`The smallest number is: ${min}`);
 
 document.write("<hr>");
 
+// Print all numbers that are larger then average:
+
+let biggerThenAvg = [];
+for (const item of numbers) {
+    if (item > avg) {
+        biggerThenAvg.push(item);
+    }
+}
+document.write(`The numbers that are larger then average: ${biggerThenAvg}`);
+
+document.write("<hr>");
+
+// Count how many numbers are smaller then the average:
+
+let smallerThenAvg = [];
+for (const item of numbers) {
+    if (item < avg) {
+        smallerThenAvg++;
+    }
+}
+document.write(`The numbers that are smaller then average: ${smallerThenAvg}`);
