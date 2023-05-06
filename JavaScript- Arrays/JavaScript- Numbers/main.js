@@ -90,14 +90,3 @@ document.write(`The smallest number is: ${min}`);
 
 document.write("<hr>");
 
-// Print all the numbers that are bigger then the average:
-
-let biggerThenAvg = avg;
-for (const item of numbers) {
-    if (biggerThenAvg > item) {
-        biggerThenAvg = item
-    }
-}
-document.write(biggerThenAvg + "| ");
-
-document.write("<hr>");
