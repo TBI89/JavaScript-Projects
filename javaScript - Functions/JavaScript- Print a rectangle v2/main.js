@@ -1,13 +1,13 @@
 "use strict";
 
-// Function that Prints a rectangle:
+// Function that Prints an empty rectangle:
 function displayRectangle(height, width) {
     for (let i = 1; i <= height; i++) {
-        let row = "";
         for (let j = 1; j <= width; j++) {
-            document.write(row + "* ");
+           const borders = (i === 1 || i === height || j === 1 || j === width) ? "* " : "&nbsp;&nbsp";
+           document.write(borders);
         }
-        document.write(row + "<br>");
+       document.write("<br>");
     }
 
 }
@@ -17,8 +17,8 @@ displayRectangle(5, 8);
 document.write("<hr>");
 
 // Call again using random values:
-let randomHeight = Math.floor(Math.random() * 100);
-let randomWidth = Math.floor(Math.random() * 100);
+let randomHeight = Math.floor((Math.random() * 3) + 3);
+let randomWidth = Math.floor((Math.random() * 5) + 5);
 displayRectangle(randomHeight, randomWidth);
 document.write("<hr>");
 
