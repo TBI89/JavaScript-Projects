@@ -1,0 +1,33 @@
+canvas {
+    border: 1px solid;
+}
+
+body {
+    text-align: center;
+}
+
+button {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.red-button {
+    background-color: red;
+}
+.green-button {
+    background-color: green;
+}
+.blue-button {
+    background-color: blue;
+}
+.yellow-button {
+    background-color: yellow;
+}
+.purple-button {
+    background-color: purple;
+}
+.aqua-button {
+    background-color: aqua;
+}

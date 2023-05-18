@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+
+    <button class="red-button" onclick="changeColor('red')"></button>
+    <button class="green-button" onclick="changeColor('green')"></button>
+    <button class="blue-button" onclick="changeColor('blue')"></button>
+    <button class="yellow-button" onclick="changeColor('yellow')"></button>
+    <button class="purple-button" onclick="changeColor('purple')"></button>
+    <button class="aqua-button" onclick="changeColor('aqua')"></button>
+    <button onclick="changeLineWidth(4)">1</button>
+    <button onclick="changeLineWidth(6)">2</button>
+    <button onclick="changeLineWidth(8)">3</button>
+    <button onclick="changeLineWidth(10)">4</button>
+    <button onclick="changeLineWidth(12)">5</button>
+    <br><br>
+
+    <canvas id="myCanvas" width="800" height="600" 
+    onmousemove="draw()"
+    onmousedown="markPoint()"
+    onmouseenter="markPoint()"></canvas>
+</body>
+
+</html>
