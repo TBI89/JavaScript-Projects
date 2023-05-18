@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+
+    <textarea id="xBox" cols="15" rows="1">X</textarea>
+    <textarea id="yBox" cols="15" rows="1">Y</textarea>
+    <textarea id="radiusBox" cols="15" rows="1">Radius</textarea>
+
+    <select id="colorBox">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="pink">Pink</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="createCircle()">Random Circle</button>
+    <br><br>
+
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+</body>
+
+</html>
