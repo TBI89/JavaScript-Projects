@@ -1,4 +1,3 @@
-
 // Call the given function and send her another one that paints the page in a random color:
 function cool2(paintCallback) {
     paintCallback();
@@ -9,3 +8,4 @@ cool2(() => {
     document.body.style.backgroundColor = colors[randomColor];
     return;
 })
+
