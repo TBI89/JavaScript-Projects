@@ -1,19 +1,21 @@
 "use strict";
 
+// Using IIFE in order to stay out of window scope:  
 (() => {
+    // When loading the page, go to the given url:
     const goToSite = document.getElementById("goToSite");
     goToSite.addEventListener("load", async () => {
         const userContainer = await getJSON("https://jsonplaceholder.typicode.com/users");
         displayUsers(userContainer);
     })
-})();
 
-function displayUsers(userContainer) {
-    const tableBody = document.getElementById("tableBody");
-    let html = "";
+    // Show user data via an HTML table:
+    function displayUsers(userContainer) {
+        const tableBody = document.getElementById("tableBody");
+        let html = "";
 
-    for (const props of userContainer) {
-        html += `
+        for (const props of userContainer) {
+            html += `
         <tr>
         
         <td>${props.name}</td>
@@ -26,13 +28,16 @@ function displayUsers(userContainer) {
         <td>${props.address.zipcode}</td>
         
         </tr>`
+        }
+        tableBody.innerHTML = html;
     }
-    tableBody.innerHTML = html;
-}
 
-async function getJSON(url) {
+    // Get JSON from REST API:
+    async function getJSON(url) {
 
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-}
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+
+})();
