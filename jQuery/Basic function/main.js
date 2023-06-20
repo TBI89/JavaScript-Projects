@@ -16,6 +16,6 @@ $(() => {
     $("#lastNameButton").click(() => {
         const lastName = document.getElementById("lastNameBox").value;
         $("#newLastNameCell").text(lastName);
-        $("#lastNameBox").hide();
+        $("#lastNameBox").hide(); 
     });
 });
